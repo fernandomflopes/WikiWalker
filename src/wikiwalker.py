@@ -62,7 +62,6 @@ def bfs(node: Node, target: str, log_strategy):
         memo[front.url] = True
         try:
             links, title = get_links(get_soup(check_limits(front.url)))
-            # print(1)
             log_strategy(title, front.url)
         except:
             continue
